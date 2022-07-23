@@ -31,6 +31,7 @@ export const Content = styled.div`
     z-index: 0;
   }
   div{
+    grid-template-columns: 362px 362px ;
     display: none;
     z-index: 1;
     position: relative;

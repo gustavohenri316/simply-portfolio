@@ -8,7 +8,7 @@ export const Projetos = [
       nameProjeto: "Feedbacks",
       link: "https://github.com/gustavohenri316/nlw-impulse",
       describle: "Projeto criado pelo nlw da Rocketseat, projeto de um botão flutuante de feedbacks",
-      img: img1,
+      img: img3,
       vercel: "https://nlw-impulse-tan.vercel.app/"
     },
     {
@@ -16,7 +16,7 @@ export const Projetos = [
       nameProjeto: "DT-Money",
       link: "https://github.com/gustavohenri316/gh-money",
       describle: "Projeto de controle financeiro feito na trilha ignite da Rocketseat",
-      img: img2,
+      img: img1,
       vercel: "https://gh-money.vercel.app/"
     },
     {
@@ -24,7 +24,7 @@ export const Projetos = [
       nameProjeto: "Event Platform",
       link: "https://github.com/gustavohenri316/Ignite-Lab",
       describle: "Projeto criado no Ignit da Rocketseat, uma aplicação de eventos",
-      img: img3,
+      img: img2,
       vercel: "https://ignite-lab-blond.vercel.app/"
     },
     {
@@ -32,7 +32,7 @@ export const Projetos = [
       nameProjeto: "Feedbacks",
       link: "https://github.com/gustavohenri316/nlw-impulse",
       describle: "Projeto criado pelo nlw da Rocketseat, projeto de um botão flutuante de feedbacks",
-      img: img1,
+      img: img3,
       vercel: "https://nlw-impulse-tan.vercel.app/"
     },
     {
@@ -40,7 +40,7 @@ export const Projetos = [
       nameProjeto: "DT-Money",
       link: "https://github.com/gustavohenri316/gh-money",
       describle: "Projeto de controle financeiro feito na trilha ignite da Rocketseat",
-      img: img2,
+      img: img1,
       vercel: "https://gh-money.vercel.app/"
     },
     {
@@ -48,7 +48,7 @@ export const Projetos = [
       nameProjeto: "Event Platform",
       link: "https://github.com/gustavohenri316/Ignite-Lab",
       describle: "Projeto criado no Ignit da Rocketseat, uma aplicação de eventos",
-      img: img3,
+      img: img2,
       vercel: "https://ignite-lab-blond.vercel.app/"
     }
   ]

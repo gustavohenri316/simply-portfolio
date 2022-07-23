@@ -7,11 +7,11 @@ export function Portfolio() {
       {Projetos.map((item) => {
         return (
           <Content key={item.id}>
-              <img src={item.img} />
-              <div>
-              <a  href={item.vercel} target='_blank'>Ver Projeto</a>
+            <img src={item.img} />
+            <div>
+              <a href={item.vercel} target='_blank'>Ver Projeto</a>
               <a href={item.link} target='_blank'>GitHub</a>
-              </div>
+            </div>
           </Content>
         )
       })}
