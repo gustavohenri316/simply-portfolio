@@ -84,7 +84,7 @@ export const Section = styled.section`
   margin-top: 4.1rem;
   gap: 2.3rem;
 `
-export const ButtonCV = styled.button`
+export const ButtonCV = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,7 +101,7 @@ export const ButtonCV = styled.button`
   letter-spacing: -0.531474px;
   color: #3D3D3D;
 `
-export const ButtonContact = styled.button`
+export const ButtonContact = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;

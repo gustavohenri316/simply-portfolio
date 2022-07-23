@@ -1,6 +1,7 @@
 import { GithubLogo, InstagramLogo, LinkedinLogo, FacebookLogo, TwitterLogo } from "phosphor-react"
 import { useContext, useState } from "react"
 import { ThemeContext } from "styled-components"
+import { Portfolio } from "../Portfolio"
 import {
   Container,
   Header,
@@ -72,13 +73,16 @@ export function Profile() {
         </Content>
       </Main>
       <Section>
-        <ButtonCV>Download CV</ButtonCV>
+        <ButtonCV href="https://media-exp1.licdn.com/dms/document/C4D2DAQFVf3PqxLRMIA/profile-treasury-document-pdf-analyzed/0/1651692976788?e=1659571200&v=beta&t=YM2z-bil5ZmqzKCCPUWkzOXszPv4XxWHRLX9JAQbCeM" target='_blank'>Download CV</ButtonCV>
         <ButtonContact>Contact me</ButtonContact>
       </Section>
       <PortifolioAndSkills>
         <ButtonPortfolio onClick={() => setButtonSelected('Portfolio')} selected={buttonSelected}>Portfolio</ButtonPortfolio>
         <ButtonSkills onClick={() => setButtonSelected('Skills')} selected={buttonSelected}>Skills</ButtonSkills>
       </PortifolioAndSkills>
+      {
+        buttonSelected === 'Portfolio' ?
+        <Portfolio/> : null}
     </Container>
   )
 }
