@@ -21,11 +21,13 @@ import {
   ButtonPortfolio,
   ButtonSkills
 } from "./styles"
-export function Profile() {
+
+interface ProfileProps {
+  onOpenContactModal: () => void
+}
+export function Profile({onOpenContactModal}: ProfileProps) {
   const { colors } = useContext(ThemeContext)
   const [buttonSelected, setButtonSelected] = useState('Portfolio')
-
-  
 
   return (
     <Container>
@@ -73,8 +75,9 @@ export function Profile() {
         </Content>
       </Main>
       <Section>
-        <ButtonCV href="https://media-exp1.licdn.com/dms/document/C4D2DAQFVf3PqxLRMIA/profile-treasury-document-pdf-analyzed/0/1651692976788?e=1659571200&v=beta&t=YM2z-bil5ZmqzKCCPUWkzOXszPv4XxWHRLX9JAQbCeM" target='_blank'>Download CV</ButtonCV>
-        <ButtonContact>Contact me</ButtonContact>
+        <ButtonCV 
+        href="https://media-exp1.licdn.com/dms/document/C4D2DAQFVf3PqxLRMIA/profile-treasury-document-pdf-analyzed/0/1651692976788?e=1659571200&v=beta&t=YM2z-bil5ZmqzKCCPUWkzOXszPv4XxWHRLX9JAQbCeM" target='_blank'>Download CV</ButtonCV>
+        <ButtonContact onClick={onOpenContactModal}>Contact me</ButtonContact>
       </Section>
       <PortifolioAndSkills>
         <ButtonPortfolio onClick={() => setButtonSelected('Portfolio')} selected={buttonSelected}>Portfolio</ButtonPortfolio>
@@ -82,7 +85,7 @@ export function Profile() {
       </PortifolioAndSkills>
       {
         buttonSelected === 'Portfolio' ?
-        <Portfolio/> : null}
+          <Portfolio /> : null}
     </Container>
   )
 }

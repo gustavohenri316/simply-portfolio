@@ -6,18 +6,31 @@ import { ThemeProvider, DefaultTheme } from "styled-components";
 import light from "./assets/styles/theme/light";
 import dark from "./assets/styles/theme/dark";
 import { usePersistedState } from "./utils/usePersistedState";
+import { useState } from "react";
+import { ContactModal } from "./components/ContactModal";
 
 export function App() {
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', light)
+  const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false);
 
-  function handleTheme(){
-    setTheme(theme.title === 'light' ? dark : light) 
+  function handleOpenContactModal() {
+    setIsNewTransactionModalOpen(true);
+  }
+  function handleCloseContactModal() {
+    setIsNewTransactionModalOpen(false);
+  }
+
+  function handleTheme() {
+    setTheme(theme.title === 'light' ? dark : light)
   }
   return (
     <ThemeProvider theme={theme}>
-      <ThemeButton theme={handleTheme}/>
-      <GlobalStyles/>
-      <Profile />
+      <ThemeButton theme={handleTheme} />
+      <GlobalStyles />
+      <Profile onOpenContactModal={handleOpenContactModal} />
+      <ContactModal
+        isOpen={isNewTransactionModalOpen}
+        onRequestClose={handleCloseContactModal} />
     </ThemeProvider>
   )
 }

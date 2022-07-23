@@ -101,7 +101,7 @@ export const ButtonCV = styled.a`
   letter-spacing: -0.531474px;
   color: #3D3D3D;
 `
-export const ButtonContact = styled.a`
+export const ButtonContact = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
