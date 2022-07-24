@@ -16,4 +16,9 @@ export const Button = styled.button`
   background: var(--primary);
   border: none;
   border-radius: 50%;
+
+  &:hover {
+    background:  ${(props) => props.theme.title === 'light' ? '#171F26' : props.theme.colors.yellow};
+    color: ${(props) => props.theme.title === 'dark' ? '#0000' : props.theme.colors.primary};
+  }
 `
