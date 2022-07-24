@@ -11,6 +11,10 @@ export const Header = styled.header`
   align-items: center;
   justify-content: center;
   gap: 2.5rem;
+
+  @media (max-widht: 750px){
+  width: 600px;
+}
 `
 export const ImageContainer = styled.div`
   width: 200px;
@@ -71,12 +75,18 @@ export const Main = styled.main`
   display: flex;
   margin-top: 3rem;
   gap: 5.6rem;
+  @media (max-widht: 750px){
+  width: 600px;
+}
 `
 export const Content = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  @media (max-widht: 750px){
+  width: 600px;
+}
 `
 
 export const Section = styled.section`
@@ -128,6 +138,10 @@ export const PortifolioAndSkills = styled.div`
   background: var(--primary);
   margin-top: 5.1rem;
   border-radius: 20px;
+
+  @media (max-widht: 750px){
+  width: 20.25rem;
+}
 `
 interface ButtonProps {
   selected: string
