@@ -36,6 +36,7 @@ body, input, textarea, select, button {
 }
 button{
   cursor: pointer;
+
 }
 
 a{
@@ -74,7 +75,19 @@ a{
       filter: brightness(0.8);
     }
   }
+body::-webkit-scrollbar {
+  width: 15px;        
+}
 
+body::-webkit-scrollbar-track {
+  background: var(--background);      
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--title);    
+  border-radius: 20px;       
+  border: 3px solid var(--background); 
+}
 
 `
 

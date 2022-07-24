@@ -1,7 +1,8 @@
-import { GithubLogo, InstagramLogo, LinkedinLogo, FacebookLogo, TwitterLogo } from "phosphor-react"
+import { GithubLogo, InstagramLogo, LinkedinLogo, FacebookLogo, WhatsappLogo } from "phosphor-react"
 import { useContext, useState } from "react"
 import { ThemeContext } from "styled-components"
 import { Portfolio } from "../Portfolio"
+import { Skills } from "../Skills"
 import {
   Container,
   Header,
@@ -39,19 +40,19 @@ export function Profile({onOpenContactModal}: ProfileProps) {
           <Title>Gustavo Henrique</Title>
           <Text>Software Developer</Text>
           <SocialMedia>
-            <MediaItem href="">
+            <MediaItem href="https://github.com/gustavohenri316" target='_blank'>
               <GithubLogo size={36} color={colors.title} />
             </MediaItem>
-            <MediaItem href="">
+            <MediaItem href="https://www.instagram.com/gustavoh.jpg/?hl=pt-br" target='_blank'>
               <InstagramLogo size={36} color={colors.title} />
             </MediaItem>
-            <MediaItem href="">
-              <TwitterLogo size={36} color={colors.title} />
+            <MediaItem href="https://api.whatsapp.com/send?phone=5531993358612" target='_blank'>
+            <WhatsappLogo size={36} color={colors.title}  />
             </MediaItem>
-            <MediaItem href="">
+            <MediaItem href="https://www.linkedin.com/in/gustavohenri316/" target='_blank'>
               <LinkedinLogo size={36} color={colors.title} />
             </MediaItem>
-            <MediaItem href="">
+            <MediaItem href="https://www.facebook.com/gustavohenri316/" target='_blank'>
               <FacebookLogo size={36} color={colors.title} />
             </MediaItem>
           </SocialMedia>
@@ -85,7 +86,7 @@ export function Profile({onOpenContactModal}: ProfileProps) {
       </PortifolioAndSkills>
       {
         buttonSelected === 'Portfolio' ?
-          <Portfolio /> : null}
+          <Portfolio /> : <Skills/>}
     </Container>
   )
 }

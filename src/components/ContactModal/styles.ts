@@ -37,6 +37,7 @@ export const Input = styled.input`
   height: 3rem;
   border-radius: 10px;
   border: none;
+  padding-left: 0.9rem;
 `
 export const TextArea = styled.textarea`
   display: flex;
@@ -44,6 +45,8 @@ export const TextArea = styled.textarea`
   height: 10rem;
   border-radius: 10px;
   border: none;
+  padding-left: 0.9rem;
+  padding-top: 0.4rem;
 `
 export const Button = styled.button`
   display: flex;
@@ -59,8 +62,14 @@ export const Button = styled.button`
   font-weight: 500;
   font-size: 1.2rem;
   line-height: 33px;
-  color: var(--title);
+  color: #000;
   right: 100%;
+
+  &:disabled{
+    cursor: not-allowed;
+    filter: brightness(1);
+    color: var(--title);
+  }
 `
 export const Close = styled.button`
   display: flex;
@@ -80,5 +89,20 @@ export const Close = styled.button`
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
+
+`
+export const Tel = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .DDD{
+  width: 15%;
+}
+gap: 2rem;
+`
+export const TelContent = styled.div`
+width: 100%;
+
 
 `

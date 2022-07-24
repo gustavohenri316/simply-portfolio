@@ -1,15 +1,29 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-
   display: grid;
   align-items: center;
   justify-content: center;
-  width: 47.25rem;
-  height: 100%;
+  width: 50.25rem;
+  height: 500px;
+  overflow-y: scroll;
   grid-template-columns: 362px 362px;
   gap: 1.8rem;
   margin-top: 4rem;
+  margin-bottom: 7rem;
+
+::-webkit-scrollbar {
+  width: 15px;        
+}
+::-webkit-scrollbar-track {
+  background: var(--background);      
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--title);    
+  border-radius: 20px;       
+  border: 3px solid var(--background); 
+}
+  
 `
 
 

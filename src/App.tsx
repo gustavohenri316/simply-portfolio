@@ -8,6 +8,7 @@ import dark from "./assets/styles/theme/dark";
 import { usePersistedState } from "./utils/usePersistedState";
 import { useState } from "react";
 import { ContactModal } from "./components/ContactModal";
+import { Footer } from "./components/Footer";
 
 export function App() {
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', light)
@@ -31,6 +32,7 @@ export function App() {
       <ContactModal
         isOpen={isNewTransactionModalOpen}
         onRequestClose={handleCloseContactModal} />
+        <Footer/>
     </ThemeProvider>
   )
 }
