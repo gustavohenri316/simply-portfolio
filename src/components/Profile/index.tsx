@@ -1,8 +1,14 @@
-import { GithubLogo, InstagramLogo, LinkedinLogo, FacebookLogo, WhatsappLogo } from "phosphor-react"
-import { useContext, useState } from "react"
-import { ThemeContext } from "styled-components"
-import { Portfolio } from "../Portfolio"
-import { Skills } from "../Skills"
+import {
+  GithubLogo,
+  InstagramLogo,
+  LinkedinLogo,
+  FacebookLogo,
+  WhatsappLogo,
+} from "phosphor-react";
+import { useContext, useState } from "react";
+import { ThemeContext } from "styled-components";
+import { Portfolio } from "../Portfolio";
+import { Skills } from "../Skills";
 import {
   Container,
   Header,
@@ -20,15 +26,15 @@ import {
   Section,
   PortifolioAndSkills,
   ButtonPortfolio,
-  ButtonSkills
-} from "./styles"
+  ButtonSkills,
+} from "./styles";
 
 interface ProfileProps {
-  onOpenContactModal: () => void
+  onOpenContactModal: () => void;
 }
-export function Profile({onOpenContactModal}: ProfileProps) {
-  const { colors } = useContext(ThemeContext)
-  const [buttonSelected, setButtonSelected] = useState('Portfolio')
+export function Profile({ onOpenContactModal }: ProfileProps) {
+  const { colors } = useContext(ThemeContext);
+  const [buttonSelected, setButtonSelected] = useState("Portfolio");
 
   return (
     <Container>
@@ -40,19 +46,34 @@ export function Profile({onOpenContactModal}: ProfileProps) {
           <Title>Gustavo Henrique</Title>
           <Text>Software Developer</Text>
           <SocialMedia>
-            <MediaItem href="https://github.com/gustavohenri316" target='_blank'>
+            <MediaItem
+              href="https://github.com/gustavohenri316"
+              target="_blank"
+            >
               <GithubLogo size={36} color={colors.title} />
             </MediaItem>
-            <MediaItem href="https://www.instagram.com/gustavoh.jpg/?hl=pt-br" target='_blank'>
+            <MediaItem
+              href="https://www.instagram.com/gustavoh.jpg/?hl=pt-br"
+              target="_blank"
+            >
               <InstagramLogo size={36} color={colors.title} />
             </MediaItem>
-            <MediaItem href="https://api.whatsapp.com/send?phone=5531993358612" target='_blank'>
-            <WhatsappLogo size={36} color={colors.title}  />
+            <MediaItem
+              href="https://api.whatsapp.com/send?phone=5531993358612"
+              target="_blank"
+            >
+              <WhatsappLogo size={36} color={colors.title} />
             </MediaItem>
-            <MediaItem href="https://www.linkedin.com/in/gustavohenri316/" target='_blank'>
+            <MediaItem
+              href="https://www.linkedin.com/in/gustavohenri316/"
+              target="_blank"
+            >
               <LinkedinLogo size={36} color={colors.title} />
             </MediaItem>
-            <MediaItem href="https://www.facebook.com/gustavohenri316/" target='_blank'>
+            <MediaItem
+              href="https://www.facebook.com/gustavohenri316/"
+              target="_blank"
+            >
               <FacebookLogo size={36} color={colors.title} />
             </MediaItem>
           </SocialMedia>
@@ -60,33 +81,51 @@ export function Profile({onOpenContactModal}: ProfileProps) {
       </Header>
       <Main>
         <Content>
-          <Text> 2 <br />
+          <Text>
+            {" "}
+            2 <br />
             Years of work <br />
-            experience</Text>
+            experience
+          </Text>
         </Content>
         <Content>
-          <Text> 50+ <br />
+          <Text>
+            {" "}
+            50+ <br />
             Completed <br />
-            projects</Text>
+            projects
+          </Text>
         </Content>
         <Content>
-          <Text> 20+ <br />
+          <Text>
+            {" "}
+            20+ <br />
             Satisfied <br />
-            customers</Text>
+            customers
+          </Text>
         </Content>
       </Main>
       <Section>
-        <ButtonCV 
-        href="https://media-exp1.licdn.com/dms/document/C4D2DAQFVf3PqxLRMIA/profile-treasury-document-pdf-analyzed/0/1651692976788?e=1659571200&v=beta&t=YM2z-bil5ZmqzKCCPUWkzOXszPv4XxWHRLX9JAQbCeM" target='_blank'>Download CV</ButtonCV>
+        <ButtonCV href="/cv-gustavo-oliveira.pdf" download>
+          Download CV
+        </ButtonCV>
         <ButtonContact onClick={onOpenContactModal}>Contact me</ButtonContact>
       </Section>
       <PortifolioAndSkills>
-        <ButtonPortfolio onClick={() => setButtonSelected('Portfolio')} selected={buttonSelected}>Portfolio</ButtonPortfolio>
-        <ButtonSkills onClick={() => setButtonSelected('Skills')} selected={buttonSelected}>Skills</ButtonSkills>
+        <ButtonPortfolio
+          onClick={() => setButtonSelected("Portfolio")}
+          selected={buttonSelected}
+        >
+          Portfolio
+        </ButtonPortfolio>
+        <ButtonSkills
+          onClick={() => setButtonSelected("Skills")}
+          selected={buttonSelected}
+        >
+          Skills
+        </ButtonSkills>
       </PortifolioAndSkills>
-      {
-        buttonSelected === 'Portfolio' ?
-          <Portfolio /> : <Skills/>}
+      {buttonSelected === "Portfolio" ? <Portfolio /> : <Skills />}
     </Container>
-  )
+  );
 }
