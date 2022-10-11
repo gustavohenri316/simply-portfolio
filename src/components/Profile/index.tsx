@@ -96,14 +96,14 @@ export function Profile({ onOpenContactModal }: ProfileProps) {
             projects
           </Text>
         </Content>
-        <Content>
+        {/* <Content>
           <Text>
             {" "}
             20+ <br />
             Satisfied <br />
             customers
           </Text>
-        </Content>
+        </Content> */}
       </Main>
       <Section>
         <ButtonCV href="/cv-gustavo-oliveira.pdf" download>
